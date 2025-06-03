@@ -13,7 +13,7 @@ readonly class LoginVoteHandler
     #[EventListener]
     public function handle(AuthorizationVote $vote): void
     {
-        if ($vote->request->uri->uri === 'login' && $vote->request->method === Method::Post) {
+        if ($vote->request->uri->uri === '/login' && $vote->request->method === Method::Post) {
             $vote->allowedAccess = true;
         }
     }

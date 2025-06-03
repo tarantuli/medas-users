@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Medas\Users;
+namespace Medas\Users\Entities;
 
 use Medas\Core\Interfaces\HasId;
 

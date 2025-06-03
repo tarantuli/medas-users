@@ -6,7 +6,7 @@ namespace Medas\Users\ConfigOptions;
 
 use Medas\Core\Attributes\Service;
 use Medas\RestRequestHandler\ConfigOptions\UsersClass as RestRequestHandlerOption;
-use Medas\Users\User;
+use Medas\Users\Entities\User;
 
 #[Service]
 readonly class UsersClass extends RestRequestHandlerOption

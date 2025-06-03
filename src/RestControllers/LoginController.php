@@ -15,7 +15,7 @@ use Medas\RestRequestHandler\{
     Responses\EntityResponse
 };
 use Medas\Routing\{Methods\Post, Route};
-use Medas\Users\UserInterface;
+use Medas\Users\Entities\UserInterface;
 
 #[Route('login')]
 readonly class LoginController

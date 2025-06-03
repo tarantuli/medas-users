@@ -2,10 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Medas\Users;
+namespace Medas\Users\Entities;
 
 use Medas\Core\Interfaces\Uuid;
 use Medas\EntityManager\{Attributes\Entity, Attributes\Id, Attributes\IsUnique, Traits\Timestamps};
+use Medas\Users\ConfigOptions;
 
 #[Entity, Entity\StoreConfigOption(ConfigOptions\UsersStore::class)]
 class User implements UserInterface
@@ -64,4 +65,3 @@ class User implements UserInterface
         return $this->displayName;
     }
 }
-

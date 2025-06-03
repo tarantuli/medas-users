@@ -1,8 +1,8 @@
 {
-    "name": "morphp/medas-placeholder",
-    "description": "Medas placeholder",
+    "name": "morphp/medas-users",
+    "description": "Medas users",
     "keywords": [
-        "placeholder"
+        "HTTP", "entities"
     ],
     "authors": [
         {
@@ -14,7 +14,11 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "require": {
-        "morphp/medas-core": "dev-dev"
+        "morphp/medas-api-keys": "dev-dev",
+        "morphp/medas-core": "dev-dev",
+        "morphp/medas-entity-manager": "dev-dev",
+        "morphp/medas-rest-request-handler": "dev-dev",
+        "morphp/medas-routing": "dev-dev"
     },
     "require-dev": {
         "morphp/medas-service-manager": "dev-dev",
@@ -22,8 +26,8 @@
     },
     "autoload": {
         "psr-4": {
-            "Medas\\Placeholder\\": "src/",
-            "Medas\\PlaceholderTest\\": "tests/"
+            "Medas\\Users\\": "src/",
+            "Medas\\UsersTest\\": "tests/"
         }
     }
 }

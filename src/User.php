@@ -19,6 +19,7 @@ class User implements UserInterface
     public string $logonName;
 
     public string $passwordHash;
+    public bool $isConfirmed = false;
     public bool $isActive = true;
     public bool $isBlocked = false;
     public string|null $displayName;
@@ -41,6 +42,11 @@ class User implements UserInterface
     public function setPasswordHash(string $hash): void
     {
         $this->passwordHash = $hash;
+    }
+
+    public function isConfirmed(): bool
+    {
+        return $this->isConfirmed;
     }
 
     public function isActive(): bool

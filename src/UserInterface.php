@@ -14,6 +14,8 @@ interface UserInterface extends HasId
 
     public function setPasswordHash(string $hash): void;
 
+    public function isConfirmed(): bool;
+
     public function isActive(): bool;
 
     public function isBlocked(): bool;

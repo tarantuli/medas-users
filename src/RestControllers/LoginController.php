@@ -61,6 +61,10 @@ readonly class LoginController
             return new BadRequestResponse();
         }
 
+        if (!$user->isConfirmed()) {
+            return new BadRequestResponse();
+        }
+
         return new EntityResponse([
             'authToken' => $this->namedTokenManager->create((string) $user->id()),
             'user' => [

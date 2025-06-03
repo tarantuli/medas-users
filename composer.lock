@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-api-keys.git",
-                "reference": "197d88ce84855f186c30e499f27c3e55540be0bb"
+                "reference": "d4b9ce0a43c958ac00f1bf41658fb90388236384"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-api-keys/zipball/197d88ce84855f186c30e499f27c3e55540be0bb",
-                "reference": "197d88ce84855f186c30e499f27c3e55540be0bb",
+                "url": "https://api.github.com/repos/tarantuli/medas-api-keys/zipball/d4b9ce0a43c958ac00f1bf41658fb90388236384",
+                "reference": "d4b9ce0a43c958ac00f1bf41658fb90388236384",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "source": "https://github.com/tarantuli/medas-api-keys/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-api-keys/issues"
             },
-            "time": "2024-10-14T10:07:36+00:00"
+            "time": "2025-06-03T12:51:00+00:00"
         },
         {
             "name": "morphp/medas-cache",
@@ -487,12 +487,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-http-request-handler.git",
-                "reference": "bef7b9635e4f5ff0b885c864d51ff97095f5a0ff"
+                "reference": "952c8fefbc031220e02aadacc343867dd4da09a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-http-request-handler/zipball/bef7b9635e4f5ff0b885c864d51ff97095f5a0ff",
-                "reference": "bef7b9635e4f5ff0b885c864d51ff97095f5a0ff",
+                "url": "https://api.github.com/repos/tarantuli/medas-http-request-handler/zipball/952c8fefbc031220e02aadacc343867dd4da09a4",
+                "reference": "952c8fefbc031220e02aadacc343867dd4da09a4",
                 "shasum": ""
             },
             "require": {
@@ -527,7 +527,7 @@
                 "source": "https://github.com/tarantuli/medas-http-request-handler/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-http-request-handler/issues"
             },
-            "time": "2025-05-27T08:38:15+00:00"
+            "time": "2025-06-03T10:39:14+00:00"
         },
         {
             "name": "morphp/medas-json",
@@ -766,12 +766,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-rest-request-handler.git",
-                "reference": "50119cb9e2a5abb155ef2d71ff59cecaa6cb53fc"
+                "reference": "a81478719c3beb70a5d6f69d36c1bc2fe0fd7094"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-rest-request-handler/zipball/50119cb9e2a5abb155ef2d71ff59cecaa6cb53fc",
-                "reference": "50119cb9e2a5abb155ef2d71ff59cecaa6cb53fc",
+                "url": "https://api.github.com/repos/tarantuli/medas-rest-request-handler/zipball/a81478719c3beb70a5d6f69d36c1bc2fe0fd7094",
+                "reference": "a81478719c3beb70a5d6f69d36c1bc2fe0fd7094",
                 "shasum": ""
             },
             "require": {
@@ -810,7 +810,7 @@
                 "source": "https://github.com/tarantuli/medas-rest-request-handler/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-rest-request-handler/issues"
             },
-            "time": "2025-05-23T12:16:41+00:00"
+            "time": "2025-06-03T08:36:25+00:00"
         },
         {
             "name": "morphp/medas-routing",

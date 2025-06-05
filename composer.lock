@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-api-keys.git",
-                "reference": "d4b9ce0a43c958ac00f1bf41658fb90388236384"
+                "reference": "3838180171c2683bf92f10edf9f7f9a8ec230260"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-api-keys/zipball/d4b9ce0a43c958ac00f1bf41658fb90388236384",
-                "reference": "d4b9ce0a43c958ac00f1bf41658fb90388236384",
+                "url": "https://api.github.com/repos/tarantuli/medas-api-keys/zipball/3838180171c2683bf92f10edf9f7f9a8ec230260",
+                "reference": "3838180171c2683bf92f10edf9f7f9a8ec230260",
                 "shasum": ""
             },
             "require": {
@@ -53,7 +53,7 @@
                 "source": "https://github.com/tarantuli/medas-api-keys/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-api-keys/issues"
             },
-            "time": "2025-06-03T12:51:00+00:00"
+            "time": "2025-06-05T09:31:08+00:00"
         },
         {
             "name": "morphp/medas-cache",
@@ -250,12 +250,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-core.git",
-                "reference": "1c3daa6c7d465336c41a2ee30a7a69c6d8d9cbe9"
+                "reference": "b8d1b4d1fa81ff3a85c63d225d7cfe3c2da09450"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-core/zipball/1c3daa6c7d465336c41a2ee30a7a69c6d8d9cbe9",
-                "reference": "1c3daa6c7d465336c41a2ee30a7a69c6d8d9cbe9",
+                "url": "https://api.github.com/repos/tarantuli/medas-core/zipball/b8d1b4d1fa81ff3a85c63d225d7cfe3c2da09450",
+                "reference": "b8d1b4d1fa81ff3a85c63d225d7cfe3c2da09450",
                 "shasum": ""
             },
             "require": {
@@ -293,7 +293,7 @@
                 "source": "https://github.com/tarantuli/medas-core/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-core/issues"
             },
-            "time": "2025-05-27T10:19:41+00:00"
+            "time": "2025-06-05T09:25:00+00:00"
         },
         {
             "name": "morphp/medas-entity-manager",
@@ -301,12 +301,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-entity-manager.git",
-                "reference": "3f75ac3c735c90f33e12689cf1c084b883a1e013"
+                "reference": "76ddbac5de56db090c721e4032715f3ee568c216"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-entity-manager/zipball/3f75ac3c735c90f33e12689cf1c084b883a1e013",
-                "reference": "3f75ac3c735c90f33e12689cf1c084b883a1e013",
+                "url": "https://api.github.com/repos/tarantuli/medas-entity-manager/zipball/76ddbac5de56db090c721e4032715f3ee568c216",
+                "reference": "76ddbac5de56db090c721e4032715f3ee568c216",
                 "shasum": ""
             },
             "require": {
@@ -343,7 +343,7 @@
                 "source": "https://github.com/tarantuli/medas-entity-manager/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-entity-manager/issues"
             },
-            "time": "2025-06-02T14:04:56+00:00"
+            "time": "2025-06-05T09:28:47+00:00"
         },
         {
             "name": "morphp/medas-file-builder",
@@ -487,12 +487,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-http-request-handler.git",
-                "reference": "952c8fefbc031220e02aadacc343867dd4da09a4"
+                "reference": "ab34c32875d42ee3d685e846acff380cc2bff10b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-http-request-handler/zipball/952c8fefbc031220e02aadacc343867dd4da09a4",
-                "reference": "952c8fefbc031220e02aadacc343867dd4da09a4",
+                "url": "https://api.github.com/repos/tarantuli/medas-http-request-handler/zipball/ab34c32875d42ee3d685e846acff380cc2bff10b",
+                "reference": "ab34c32875d42ee3d685e846acff380cc2bff10b",
                 "shasum": ""
             },
             "require": {
@@ -527,7 +527,7 @@
                 "source": "https://github.com/tarantuli/medas-http-request-handler/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-http-request-handler/issues"
             },
-            "time": "2025-06-03T10:39:14+00:00"
+            "time": "2025-06-05T09:27:19+00:00"
         },
         {
             "name": "morphp/medas-json",
@@ -766,12 +766,12 @@
             "source": {
                 "type": "git",
                 "url": "git@github.com:tarantuli/medas-rest-request-handler.git",
-                "reference": "a81478719c3beb70a5d6f69d36c1bc2fe0fd7094"
+                "reference": "0eb61795ba54bf406b289c3185de313612869b66"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/tarantuli/medas-rest-request-handler/zipball/a81478719c3beb70a5d6f69d36c1bc2fe0fd7094",
-                "reference": "a81478719c3beb70a5d6f69d36c1bc2fe0fd7094",
+                "url": "https://api.github.com/repos/tarantuli/medas-rest-request-handler/zipball/0eb61795ba54bf406b289c3185de313612869b66",
+                "reference": "0eb61795ba54bf406b289c3185de313612869b66",
                 "shasum": ""
             },
             "require": {
@@ -810,7 +810,7 @@
                 "source": "https://github.com/tarantuli/medas-rest-request-handler/tree/dev",
                 "issues": "https://github.com/tarantuli/medas-rest-request-handler/issues"
             },
-            "time": "2025-06-03T08:36:25+00:00"
+            "time": "2025-06-03T12:58:08+00:00"
         },
         {
             "name": "morphp/medas-routing",

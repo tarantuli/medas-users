@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Medas\Users\RestControllers;
 
 use Medas\ApiKeys\NamedTokenManager;
-use Medas\Core\{Attributes\ConfigValue, Interfaces\EventDispatcher};
+use Medas\Core\Attributes\ConfigValue;
 use Medas\EntityManager\Repository;
 use Medas\EntityManager\Selector\Selectors\WithValues;
 use Medas\HttpRequestHandler\{Attributes\BodyArgument, ResponseTypes\Response};
@@ -23,7 +23,6 @@ readonly class LoginController
     public function __construct(
         private Repository        $repository,
         private NamedTokenManager $namedTokenManager,
-        private EventDispatcher   $dispatcher,
 
         #[ConfigValue(UsersClass::class)]
         private string            $usersClass,
@@ -73,7 +72,7 @@ readonly class LoginController
             ],
         ]);
 
-        $this->dispatcher->dispatch(new UserLoginResponse($user, $response));
+        dispatch(new UserLoginResponse($user, $response));
 
         return $response;
     }

@@ -4,14 +4,8 @@ declare(strict_types=1);
 
 namespace Medas\Users\Entities;
 
-use Medas\Core\Interfaces\Uuid;
-use Medas\EntityManager\{
-    Attributes\Entity,
-    Attributes\Id,
-    Attributes\IsUnique,
-    Traits\Timestamps,
-    Types\Binary
-};
+use Medas\Core\{Interfaces\Uuid, Types\Binary};
+use Medas\EntityManager\{Attributes\Entity, Attributes\Id, Attributes\IsUnique, Traits\Timestamps};
 use Medas\Users\ConfigOptions;
 
 #[Entity, Entity\StoreConfigOption(ConfigOptions\UsersStore::class)]

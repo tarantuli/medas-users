@@ -21,8 +21,8 @@ use Medas\Users\Entities\UserInterface;
 readonly class LoginController
 {
     public function __construct(
-        private Repository        $repository,
         private NamedTokenManager $namedTokenManager,
+        private Repository        $repository,
 
         #[ConfigValue(UsersClass::class)]
         private string            $usersClass,

@@ -9,7 +9,7 @@ use Medas\HttpRequestHandler\{Request\HeaderFinder, RequestDataManager, Response
 use Medas\RestRequestHandler\Responses\SuccessResponse;
 use Medas\Routing\{Methods\Post, Route};
 
-#[Route('login')]
+#[Route('logout')]
 readonly class LogoutController
 {
     public function __construct(

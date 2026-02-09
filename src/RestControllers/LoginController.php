@@ -39,6 +39,8 @@ readonly class LoginController
         string $password
     ): Response
     {
+        $event = new Logins\LoginEvent($userName, $password);
+
         /** @var UserInterface|null $user */
         $user = $this->repository->fetchOne(new WithValues(
             $this->usersClass,
@@ -46,10 +48,18 @@ readonly class LoginController
         ));
 
         if (!$user) {
+            $event->result = Logins\Result::UserNotFound;
+
+            dispatch($event);
+
             return new BadRequestResponse();
         }
 
         if (!password_verify($password, $user->passwordHash())) {
+            $event->result = Logins\Result::WrongPassword;
+
+            dispatch($event);
+
             return new BadRequestResponse();
         }
 
@@ -58,12 +68,25 @@ readonly class LoginController
         }
 
         if ($user->isBlocked()) {
+            $event->result = Logins\Result::UserIsBlocked;
+
+            dispatch($event);
+
             return new BadRequestResponse();
         }
 
         if (!$user->isConfirmed()) {
+            $event->result = Logins\Result::UserIsNotConfirmed;
+
+            dispatch($event);
+
             return new BadRequestResponse();
         }
+
+        $event->result = Logins\Result::Success;
+        $event->user = $user;
+
+        dispatch($event);
 
         $response = new EntityResponse([
             'authToken' => $this->namedTokenManager->create((string) $user->id()),

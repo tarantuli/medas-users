@@ -7,7 +7,7 @@ namespace Medas\Users\RestControllers;
 use Medas\RestRequestHandler\Responses\EntityResponse;
 use Medas\Users\Entities\UserInterface;
 
-class UserLoginResponse
+readonly class UserLoginResponse
 {
     public function __construct(
         public UserInterface  $user,

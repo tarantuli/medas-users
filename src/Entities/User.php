@@ -25,7 +25,7 @@ class User implements UserInterface
     public bool $isConfirmed = false;
     public bool $isActive = true;
     public bool $isBlocked = false;
-    public string|null $displayName;
+    public string|null $displayName = null;
 
     public function id(): Uuid
     {

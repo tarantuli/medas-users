@@ -1,9 +1,10 @@
 {
   "name": "morphp/medas-users",
   "description": "Medas users",
-  "version": "2.0.1",
   "keywords": [
-    "HTTP",
+    "users",
+    "authentication",
+    "login",
     "entities"
   ],
   "authors": [
@@ -14,21 +15,26 @@
   ],
   "type": "library",
   "require": {
-    "morphp/medas-api-keys": "^2",
-    "morphp/medas-core": "^2",
-    "morphp/medas-entity-manager": "^2",
-    "morphp/medas-http-request-handler": "^2",
-    "morphp/medas-rest-request-handler": "^2",
-    "morphp/medas-routing": "^2",
-    "morphp/medas-storage-manager": "^2"
+    "morphp/medas-api-keys": "^3",
+    "morphp/medas-core": "^3",
+    "morphp/medas-entity-manager": "^3",
+    "morphp/medas-http-request-handler": "^3",
+    "morphp/medas-rest-request-handler": "^3",
+    "morphp/medas-routing": "^3",
+    "morphp/medas-storage-manager": "^3"
   },
   "require-dev": {
-    "morphp/medas-service-manager": "^2",
-    "phpunit/phpunit": "^9.5"
+    "morphp/medas-object-instantiator": "^3",
+    "morphp/medas-service-manager": "^3",
+    "phpunit/phpunit": "^10"
   },
   "autoload": {
     "psr-4": {
-      "Medas\\Users\\": "src/",
+      "Medas\\Users\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
       "Medas\\UsersTest\\": "tests/"
     }
   }

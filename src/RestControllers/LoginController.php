@@ -15,7 +15,7 @@ use Medas\RestRequestHandler\{
     Responses\EntityResponse
 };
 use Medas\Routing\{Methods\Post, Route};
-use Medas\Users\Entities\UserInterface;
+use Medas\Users\{Entities\UserInterface, Events\LoginEvent};
 
 #[Route('login')]
 readonly class LoginController
@@ -39,7 +39,7 @@ readonly class LoginController
         string $password
     ): Response
     {
-        $event = new Logins\LoginEvent($userName, $password);
+        $event = new LoginEvent($userName, $password);
 
         /** @var UserInterface|null $user */
         $user = $this->repository->fetchOne(new WithValues(
@@ -63,10 +63,6 @@ readonly class LoginController
             return new BadRequestResponse();
         }
 
-        if (password_needs_rehash($user->passwordHash(), PASSWORD_DEFAULT)) {
-            $user->setPasswordHash(password_hash($password, PASSWORD_DEFAULT));
-        }
-
         if ($user->isBlocked()) {
             $event->result = Logins\Result::UserIsBlocked;
 
@@ -81,6 +77,10 @@ readonly class LoginController
             dispatch($event);
 
             return new BadRequestResponse();
+        }
+
+        if (password_needs_rehash($user->passwordHash(), PASSWORD_DEFAULT)) {
+            $user->setPasswordHash(password_hash($password, PASSWORD_DEFAULT));
         }
 
         $event->result = Logins\Result::Success;

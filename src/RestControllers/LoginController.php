@@ -4,8 +4,7 @@ declare(strict_types=1);
 
 namespace Medas\Users\RestControllers;
 
-use Medas\ApiKeys\NamedTokenManager;
-use Medas\Core\Attributes\ConfigValue;
+use Medas\Core\{Attributes\ConfigValue, Interfaces\AuthenticationTokenController};
 use Medas\EntityManager\Repository;
 use Medas\EntityManager\Selector\Selectors\WithValues;
 use Medas\HttpRequestHandler\{Attributes\BodyArgument, ResponseTypes\Response};
@@ -21,11 +20,11 @@ use Medas\Users\{Entities\UserInterface, Events\LoginEvent};
 readonly class LoginController
 {
     public function __construct(
-        private NamedTokenManager $namedTokenManager,
-        private Repository        $repository,
+        private AuthenticationTokenController $tokenController,
+        private Repository                    $repository,
 
         #[ConfigValue(UsersClass::class)]
-        private string            $usersClass,
+        private string                        $usersClass,
     )
     {
     }
@@ -88,8 +87,13 @@ readonly class LoginController
 
         dispatch($event);
 
+        $authenticationData = new Logins\AuthenticationData($user->id());
+
+        // Dispatch so listeners can add additional data to the authentication data
+        dispatch($authenticationData);
+
         $response = new EntityResponse([
-            'authToken' => $this->namedTokenManager->create((string) $user->id()),
+            'authToken' => $this->tokenController->create($authenticationData),
             'user' => [
                 'displayName' => $user->displayName(),
             ],

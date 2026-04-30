@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Medas\Users;
 
-use Medas\ApiKeys\ApiKeysPackage;
 use Medas\Core\{AsSingleton, BasePackage};
 use Medas\EntityManager\EntityManagerPackage;
 use Medas\RestRequestHandler\RestRequestHandlerPackage;
@@ -17,7 +16,6 @@ class UsersPackage extends BasePackage
     public function dependencies(): array
     {
         return [
-            ApiKeysPackage::instance(),
             EntityManagerPackage::instance(),
             RestRequestHandlerPackage::instance(),
             RoutingPackage::instance(),

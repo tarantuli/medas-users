@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Medas\Users\RestControllers;
 
-use Medas\ApiKeys\NamedTokenManager;
+use Medas\Core\Interfaces\AuthenticationTokenController;
 use Medas\HttpRequestHandler\{Request\HeaderFinder, RequestFactory, ResponseTypes\Response};
 use Medas\RestRequestHandler\Responses\SuccessResponse;
 use Medas\Routing\{Methods\Post, Route};
@@ -13,9 +13,9 @@ use Medas\Routing\{Methods\Post, Route};
 readonly class LogoutController
 {
     public function __construct(
-        private HeaderFinder      $headerFinder,
-        private NamedTokenManager $namedTokenManager,
-        private RequestFactory    $requestFactory,
+        private AuthenticationTokenController $tokenController,
+        private HeaderFinder                  $headerFinder,
+        private RequestFactory                $requestFactory,
     )
     {
     }
@@ -38,7 +38,7 @@ readonly class LogoutController
 
         $token = substr($header, 7);
 
-        $this->namedTokenManager->delete($token);
+        $this->tokenController->invalidate($token);
 
         return new SuccessResponse(true);
     }

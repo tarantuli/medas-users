@@ -11,7 +11,7 @@ class AuthenticationData implements AuthenticationDataInterface
     public array $additionalData = [];
 
     public function __construct(
-        private readonly mixed $userId,
+        public readonly mixed $userId,
     )
     {
     }
